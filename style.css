@@ -1,0 +1,117 @@
+body {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: auto;
+  background-image: url("./assets/whiteGlossBackground.png");
+}
+
+/* Mobile Only */
+@media only screen and (max-width: 425px) {
+  body {
+    background-size: 1200%;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  #app-store-buttons {
+    display: contents;
+  }
+}
+
+/* Mobile Design - Tablet */
+@media only screen and (max-width: 999px) {
+  body {
+    background-size: 1200%;
+  }
+
+  /* Make sure to show the links once we're on a desktop */
+
+  /* Make buttons stack instead */
+  /**/
+
+  #app-store-buttons p {
+    padding: 8px;
+    visibility: hidden;
+  }
+}
+
+/* Desktop Design */
+@media only screen and (min-width: 1000px) {
+  body {
+    background-size: 700%;
+  }
+
+  /* Make sure to show the links once we're on a desktop */
+
+  /* Push out the lists for better visibility */
+}
+
+p {
+  font-size: 18px;
+  line-height: 160%;
+  margin: auto;
+  font-weight: var(--body-font-weight);
+}
+
+#indicators {
+  position: absolute;
+  bottom: -130px;
+}
+
+#repo-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.indicator-separator {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.indicator {
+  font-size: 16px;
+  color: #00000059;
+  font-weight: 400;
+}
+
+#indicators a {
+  text-underline-offset: 1px;
+  transition: 0.2s;
+}
+
+#indicators a:hover {
+  color: var(--small-link-color);
+}
+
+.icon-link {
+  width: 16px;
+  padding-left: 7px;
+}
+
+.icon-link-small {
+  width: 14px;
+  padding-left: 7px;
+}
+
+.link {
+  color: var(--link-color);
+  text-decoration: none;
+  padding-bottom: 3px;
+
+  background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, var(--link-underline-color), var(--link-underline-color));
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 500ms;
+}
+
+.link:hover {
+  background-size: 0 3px, 100% 3px;
+}
